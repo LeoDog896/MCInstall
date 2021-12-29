@@ -16,16 +16,16 @@ printf -- "Installing qt5 qt5-qtbase, required for MultiMC\n"
 sudo dnf install qt5-qtbase -y
 
 printf -- "Downloading MultiMC...\n"
-wget https://files.multimc.org/downloads/mmc-stable-lin64.tar.gz -O MultiMc.tar.gz
+wget https://files.multimc.org/downloads/mmc-stable-lin64.tar.gz -O /tmp/MultiMC.tar.gz
 
 printf -- "Downloading MultiMC Icon...\n"
-wget https://avatars2.githubusercontent.com/u/5411890 -O MultiMC.png
+wget https://avatars2.githubusercontent.com/u/5411890 -O ~/.local/MultiMC/MultiMC.png
 
 printf -- "Unzipping MultiMC\n"
-sudo tar -xf MultiMc.tar.gz --strip-components=1
+sudo tar -xf /tmp/MultiMC.tar.gz -C ~/.local/MultiMC/ --strip-components=1
 
 printf -- "Making MultiMC executable\n"
-chmod +x ./MultiMC
+chmod +x ~/.local/MultiMC/MultiMC
 
 printf -- "Removing downloaded ZIP\n"
 rm ~/.local/MultiMC/MultiMC.tar.gz
