@@ -16,6 +16,7 @@ printf -- "Installing qt5 qt5-qtbase, required for MultiMC\n"
 sudo dnf install qt5-qtbase -y
 
 printf -- "Downloading MultiMC...\n"
+mkdir ~/.local/MultiMC
 wget https://files.multimc.org/downloads/mmc-stable-lin64.tar.gz -O /tmp/MultiMC.tar.gz
 
 printf -- "Downloading MultiMC Icon...\n"
@@ -28,7 +29,7 @@ printf -- "Making MultiMC executable\n"
 chmod +x ~/.local/MultiMC/MultiMC
 
 printf -- "Removing downloaded ZIP\n"
-rm ~/.local/MultiMC/MultiMC.tar.gz
+rm /tmp/MultiMC.tar.gz
 
 printf -- "Making .desktop file for MultiMC (KDE) \n"
 mkdir ~/.local/share/applications
