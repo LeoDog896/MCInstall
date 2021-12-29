@@ -4,6 +4,7 @@ wget https://avatars2.githubusercontent.com/u/5411890 -O MultiMC.png
 sudo tar -xf MultiMc.tar.gz --strip-components=1
 chmod +x ./MultiMC
 rm MultiMc.tar.gz
+mkdir ~/.local/share/applications
 echo "[Desktop Entry]
 Comment=
 Exec=$PWD/MultiMC
