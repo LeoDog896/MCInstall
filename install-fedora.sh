@@ -28,16 +28,16 @@ printf -- "Making MultiMC executable\n"
 chmod +x ./MultiMC
 
 printf -- "Removing downloaded ZIP\n"
-rm MultiMc.tar.gz
+rm ~/.local/MultiMC/MultiMC.tar.gz
 
 printf -- "Making .desktop file for MultiMC (KDE) \n"
 mkdir ~/.local/share/applications
 
 echo "[Desktop Entry]
 Comment=
-Exec=$0/MultiMC
+Exec=~/.local/MultiMC/MultiMC
 GenericName=Manage Minecraft instances with ease
-Icon=$0/MultiMC.png
+Icon=~/.local/MultiMC/MultiMC.png
 Name=MultiMC
 NoDisplay=false
 Path[$0]=
