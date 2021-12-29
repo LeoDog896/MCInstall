@@ -7,9 +7,9 @@ rm MultiMc.tar.gz
 mkdir ~/.local/share/applications
 echo "[Desktop Entry]
 Comment=
-Exec=$PWD/MultiMC
+Exec=$0/MultiMC
 GenericName=Manage Minecraft instances with ease
-Icon=$PWD/MultiMC.png
+Icon=$0/MultiMC.png
 Name=MultiMC
 NoDisplay=false
 Path[$e]=
@@ -20,3 +20,5 @@ Type=Application
 X-KDE-SubstituteUID=false
 X-KDE-Username=
 " >> ~/.local/share/applications/MultiMC.desktop
+wget https://download.oracle.com/java/17/latest/jdk-17_linux-x64_bin.rpm
+sudo rpm -Uvh jdk-17_linux-x64_bin.rpm
