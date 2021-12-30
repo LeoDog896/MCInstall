@@ -18,12 +18,13 @@ then
   sudo dnf install qt5-qtbase -y
 elif command -v apt &> /dev/null
 then
-  printf -- "Installing libqt5core5a libqt5network5 libqt5gui5, required for MultiMC on this OS\n"
+  printf -- "Installing libqt5core5a libqt5network5 +libqt5gui5, required for MultiMC on this OS\n"
   sudo apt install libqt5core5a libqt5network5 libqt5gui5
 elif command -v zypper &> /dev/null
+then
   printf -- "Installing libqt5-qtbase, required for MultiMC on this OS\n"
   sudo zypper install libqt5-qtbase
-fin
+fi
 
 printf -- "Downloading MultiMC...\n"
 mkdir ~/.local/MultiMC
