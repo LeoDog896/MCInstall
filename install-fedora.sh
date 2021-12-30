@@ -5,8 +5,8 @@ set -e;
 
 handle_exit_code() {
   ERROR_CODE="$?";
-  printf -- 'An error occured. Removing MultiMC ZIP\n';
-  rm MultiMc.tar.gz
+  printf -- 'Cleaning up...';
+  rm /tmp/MultiMC.tar.gz
   printf -- "DONE.\nExiting with error code %s.\n" ERROR_CODE;
   exit ${ERROR_CODE};
 }
