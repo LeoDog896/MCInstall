@@ -42,24 +42,21 @@ chmod +x ~/.local/MultiMC/MultiMC
 printf -- "Removing downloaded ZIP\n"
 rm /tmp/MultiMC.tar.gz
 
-printf -- "Making .desktop file for MultiMC (KDE) \n"
-mkdir -p ~/.local/share/applications
-
 echo "[Desktop Entry]
 Comment=
-Exec=~/.local/MultiMC/MultiMC
+Exec=$(readlink -f ~/.local/MultiMC/MultiMC)
 GenericName=Manage Minecraft instances with ease
-Icon=~/.local/MultiMC/MultiMC.png
+Icon=$(readlink -f ~/.local/MultiMC/MultiMC.png)
 Name=MultiMC
 NoDisplay=false
-Path[$0]=
 StartupNotify=true
-Terminal=0
-TerminalOptions=
+Terminal=false
 Type=Application
 X-KDE-SubstituteUID=false
 X-KDE-Username=
-" >> ~/.local/share/applications/MultiMC.desktop
+" >> ~/.local/MultiMC/MultiMC.desktop
+
+sudo desktop-file-install ~/.local/MultiMC/MultiMC.desktop
 
 printf -- "Downloading JDK 17...\n"
 wget https://download.oracle.com/java/17/latest/jdk-17_linux-x64_bin.rpm
