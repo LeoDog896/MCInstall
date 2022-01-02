@@ -43,7 +43,7 @@ printf -- "Removing downloaded ZIP\n"
 rm /tmp/MultiMC.tar.gz
 
 printf -- "Making .desktop file for MultiMC (KDE) \n"
-mkdir ~/.local/share/applications
+mkdir -p ~/.local/share/applications
 
 echo "[Desktop Entry]
 Comment=
