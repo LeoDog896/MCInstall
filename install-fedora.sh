@@ -27,7 +27,7 @@ then
 fi
 
 printf -- "Downloading MultiMC...\n"
-mkdir ~/.local/MultiMC
+mkdir -q ~/.local/MultiMC
 wget https://files.multimc.org/downloads/mmc-stable-lin64.tar.gz -O /tmp/MultiMC.tar.gz
 
 printf -- "Downloading MultiMC Icon...\n"
