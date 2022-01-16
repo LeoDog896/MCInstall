@@ -54,7 +54,7 @@ Terminal=false
 Type=Application
 X-KDE-SubstituteUID=false
 X-KDE-Username=
-" >> ~/.local/MultiMC/MultiMC.desktop
+" > ~/.local/MultiMC/MultiMC.desktop
 
 sudo desktop-file-install ~/.local/MultiMC/MultiMC.desktop
 
