@@ -1,3 +1,4 @@
+# DEPRECATED: PLEASE USE POLYMC INSTEAD!!!
 # MCInstall
 MultiMC installation script for linux.
 
